@@ -1,12 +1,13 @@
 import React, { useState, useEffect }from "react";
-import {Navbar, Home, Login, Posts, Profile} from './';
+import {registerUser} from "../api-adapter"
+import {Navbar, Home, Login, Posts, Profile, Register} from './';
 
 
 
 
 const Main = () => {
   const [postData, setPostData] = useState([])
-
+  
   useEffect (() => {
     async function getSellerData() {
       const response = await fetch('https://strangers-things.herokuapp.com/api/2209-FTB-ET-WEB-FT/posts')
@@ -19,12 +20,13 @@ const Main = () => {
   }, []
   )  
   
-  
+    
   return (
     <div id="main">
       <Navbar />
       <Home />
       <Login />
+      <Register registerUser = {registerUser} />
       <Posts setPostData = {setPostData} postData = {postData} />
       <Profile />
     </div>

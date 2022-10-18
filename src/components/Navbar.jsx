@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from "react-router-dom"
+import Register from "./Register";
 
 const Navbar = () => {
   return (
@@ -8,7 +10,7 @@ const Navbar = () => {
           <button className = "navBtn">Home</button>
           <button className = "navBtn">Profile</button>
           <button className = "navBtn">Posts</button>
-          <button className = "navBtn">Login</button>
+          <Link to={'/Register'}><button className = "navBtn">Login</button></Link>
           <button className = "navBtn">Logout</button>
         </div>
     </div>
