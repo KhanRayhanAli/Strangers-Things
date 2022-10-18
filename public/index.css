@@ -14,4 +14,25 @@ body {
   color: white;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+#navbar h2 {
+  margin-left: 1rem;
+}
+
+.navigation button {
+  font-family: 'Poller One', Arial, sans-serif;
+  margin-right: .5rem;
+  background-color: #222222;
+  border: none;
+  padding: 1rem;
+  color: white;
+  border-radius: 5px;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+.navigation button:hover {
+  background-color: #3f3f3f;
 }
