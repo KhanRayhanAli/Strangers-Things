@@ -33,7 +33,7 @@ const Main = () => {
     <div id="main">
       <Navbar />
       <Login />
-      <Posts setPostData={setPostData} />
+      <Posts setPostData={setPostData} userPosts={userPosts} />
       <Profile />
     </div>
   );
