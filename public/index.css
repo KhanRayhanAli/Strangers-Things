@@ -3,6 +3,7 @@ body {
   height: 100vh;
   width: 100vw;
   margin: 0;
+  background-color: rgb(180, 180, 180);
 }
 
 #navbar {
@@ -35,4 +36,106 @@ body {
 
 .navigation button:hover {
   background-color: #3f3f3f;
+}
+
+#siteName {
+  color: rgb(168, 0, 0);
+  font-family: 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+.postsBox {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#singlePost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: #222222;
+  border-radius: 5px;
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: .5rem;
+}
+
+#allTitle {
+  padding-top: .5rem;
+  color: rgb(168, 0, 0);
+  font-family: 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+#allPrice {
+  padding-bottom: .5rem;
+}
+
+#allBtn {
+  font-family: 'Poller One', Arial, sans-serif;
+  background-color: #222222;
+  border: #3f3f3f solid;
+  padding: .5rem;
+  color: white;
+  border-radius: 5px;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+#allBtn:hover {
+  background-color: #3f3f3f;
+}
+
+#postDetails {
+  padding: 1rem;
+  padding-top: 0;
+  background-color: #222222;
+  color: white;
+  margin: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#detailBtn {
+  font-family: 'Poller One', Arial, sans-serif;
+  background-color: #222222;
+  border: none;
+  padding: .5rem;
+  color: white;
+  border-radius: 5px;
+  font-size: .75rem;
+  cursor: pointer;
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+#detailBtn:hover {
+  background-color: #3f3f3f;
+}
+
+#detailTitle {
+  padding-top: .5rem;
+  color: rgb(168, 0, 0);
+  font-family: 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+#PriLoc {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+#detailPrice{
+  margin-right: 1rem;
+}
+
+#detailLocate {
+  margin-left: 1rem;
 }

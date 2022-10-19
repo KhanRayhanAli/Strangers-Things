@@ -16,9 +16,6 @@ const Main = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" >
-           
-        
-      
         <Route path="Home" element={<Home />}></Route>
         <Route path="Login" element={<Login />}></Route>
         <Route path="Register" element={  <Register registerUser = {registerUser} />}></Route>
@@ -35,7 +32,6 @@ const Main = () => {
       const result = await response.json()
       const postData = result.data.posts
       setPostData(postData)
-      console.log(postData)
     }
     getSellerData()
   }, []
@@ -45,7 +41,8 @@ const Main = () => {
   return (
     <div id="main">
       <Navbar />
-     <RouterProvider router={router}></RouterProvider>
+      <RouterProvider router={router}></RouterProvider>
+     
     </div>
   );
 };

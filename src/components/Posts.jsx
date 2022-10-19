@@ -21,7 +21,7 @@ const Posts = (props) => {
                             <div><h3 id="allTitle">{post.title}</h3></div>
                             <div id="allPrice">{"Price: "+post.price}</div>
                            
-                            <Link to= {`/PostDetails/${post._id}`}><button>See Details</button></Link>
+                            <Link to= {`/PostDetails/${post._id}`}><button id="allBtn">See Details</button></Link>
                         </div>
                 )}) : <div>Posts Loading...</div>
             }
