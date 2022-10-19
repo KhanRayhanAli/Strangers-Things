@@ -1,12 +1,33 @@
 import React, { useState, useEffect }from "react";
 import {registerUser} from "../api-adapter"
-import {Navbar, Home, Login, Posts, Profile, Register} from './';
+import {Navbar, Home, Login, Posts, Profile, Register, PostDetails} from './';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  createRoutesFromElements,
+} from "react-router-dom";
 
 
 
 
 const Main = () => {
   const [postData, setPostData] = useState([])
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+        <Route path="/" >
+           
+        
+      
+        <Route path="Home" element={<Home />}></Route>
+        <Route path="Login" element={<Login />}></Route>
+        <Route path="Register" element={  <Register registerUser = {registerUser} />}></Route>
+        <Route path="Profile" element={<Profile />}></Route>
+        <Route path="" element={<Posts setPostData = {setPostData} postData = {postData} />}/>
+        <Route path={"PostDetails/:id"} element={<PostDetails postData = {postData}/>}/>
+        </Route>
+    )
+  )
   
   useEffect (() => {
     async function getSellerData() {
@@ -24,11 +45,7 @@ const Main = () => {
   return (
     <div id="main">
       <Navbar />
-      <Home />
-      <Login />
-      <Register registerUser = {registerUser} />
-      <Posts setPostData = {setPostData} postData = {postData} />
-      <Profile />
+     <RouterProvider router={router}></RouterProvider>
     </div>
   );
 };
