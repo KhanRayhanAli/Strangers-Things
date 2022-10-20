@@ -41,6 +41,7 @@ const Main = () => {
   return (
     <div id="main">
       <Navbar />
+      <Register />
       <RouterProvider router={router}></RouterProvider>
      
     </div>

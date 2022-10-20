@@ -11,7 +11,6 @@ const Navbar = () => {
           <button className = "navBtn">Profile</button>
           <button className = "navBtn">Posts</button>
           <button className = "navBtn">Login</button>
-          <button className = "navBtn">Logout</button>
         </div>
     </div>
   );

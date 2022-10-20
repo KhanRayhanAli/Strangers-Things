@@ -139,3 +139,13 @@ body {
 #detailLocate {
   margin-left: 1rem;
 }
+
+.usePassBox {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #222222;
+  color: white;
+  margin: 1rem;
+  border-radius: 5px;
+}
