@@ -8,9 +8,10 @@ const Register = (props) => {
         const password = event.target[1].value 
         const registeredUser = await registerUser(username, password) 
         const token = registeredUser.token
+        console.log(token)
         localStorage.removeItem('token')
         localStorage.setItem('token', token)
-        console.log(username)
+        
 } 
 
     return (
@@ -20,8 +21,8 @@ const Register = (props) => {
                 <input id="username" type="text" required/>
                 <label htmlFor="password" >Password: </label>
                 <input id="password" type='password'/>
-                <label htmlFor="confirmPassword" >Confirm Password: </label>
-                <input id="password" type='password'/>
+                {/* <label htmlFor="confirmPassword" >Confirm Password: </label>
+                <input id="confirmpassword" type='password'/> */}
                 <button type="submit">Submit</button>
             </form>
         </div>

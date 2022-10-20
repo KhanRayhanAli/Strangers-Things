@@ -15,9 +15,9 @@ const Main = () => {
   const [postData, setPostData] = useState([])
   const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/" >
+        <Route path="/">
         <Route path="Home" element={<Home />}></Route>
-        <Route path="Login" element={<Login />}></Route>
+        <Route path="login" element={<Login />}></Route>
         <Route path="Register" element={  <Register registerUser = {registerUser} />}></Route>
         <Route path="Profile" element={<Profile />}></Route>
         <Route path="" element={<Posts setPostData = {setPostData} postData = {postData} />}/>
@@ -41,7 +41,7 @@ const Main = () => {
   return (
     <div id="main">
       <Navbar />
-      <Register />
+      {/* <Register /> */}
       <RouterProvider router={router}></RouterProvider>
      
     </div>
