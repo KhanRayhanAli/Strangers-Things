@@ -2,7 +2,9 @@ import React from "react";
 import { useParams, Link, Outlet  } from "react-router-dom";
 import Register from "./Register";
 
+
 const Navbar = () => {
+
   return (
     <>
     <div id="navbar">
@@ -17,7 +19,9 @@ const Navbar = () => {
     </div>
     <Outlet/>
     </>
+   
   );
+ 
 };
 
 export default Navbar;

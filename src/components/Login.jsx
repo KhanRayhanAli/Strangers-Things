@@ -13,8 +13,8 @@ async function handleSubmit(event) {
     localStorage.setItem('token', token)
 }
 return (
-    <>
-    {registeredUser ? (<> 
+   
+   
     <div className="usePassBox">
         <form onSubmit={handleSubmit}>
             <label htmlFor="username">Username: </label>
@@ -24,13 +24,9 @@ return (
             <button type="submit">Login</button>
         </form>
     </div>
-    </>
-    ) : (
-       <div> <Link to="Register"><button>Sign Up</button></Link> </div> 
-    )
-    }
-    </>
-)
+    
+    ) 
+
 
 }
 

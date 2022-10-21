@@ -22,7 +22,7 @@ const PostDetails = (props) => {
 
     return (
         <div className="postDetails">
-            <Link to="/">
+            <Link to="/Posts">
             <button id="detailBtn">Go Back</button>
             </Link>
             <div key={`posts-${postDetails._id}`} id="postDetails">
