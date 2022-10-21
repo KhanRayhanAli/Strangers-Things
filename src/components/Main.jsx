@@ -6,6 +6,7 @@ import {
   RouterProvider,
   Route,
   createRoutesFromElements,
+  Navigate,
 } from "react-router-dom";
 
 
@@ -16,11 +17,11 @@ const Main = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/">
-        <Route path="Home" element={<Home />}></Route>
-        <Route path="login" element={<Login />}></Route>
-        <Route path="Register" element={  <Register registerUser = {registerUser} />}></Route>
-        <Route path="Profile" element={<Profile />}></Route>
-        <Route path="" element={<Posts setPostData = {setPostData} postData = {postData} />}/>
+        <Route path="/Home" element={<Navigate to = "/Home"/>}></Route>
+        <Route path="/Login" element={<Login />}></Route>
+        <Route path="/Register" element={  <Register registerUser = {registerUser} />}></Route>
+        <Route path="/Profile" element={<Profile />}></Route>
+        <Route path="/Posts" element={<Navigate to = "/Posts" />}/>
         <Route path={"PostDetails/:id"} element={<PostDetails postData = {postData}/>}/>
         </Route>
     )
@@ -41,7 +42,12 @@ const Main = () => {
   return (
     <div id="main">
       <Navbar />
-      {/* <Register /> */}
+      <Home />
+      <Login />
+      <Register registerUser = {registerUser}/>
+      <Profile />
+      <Posts setPostData = {setPostData} postData = {postData}/>
+      <PostDetails postData = {postData}/>
       <RouterProvider router={router}></RouterProvider>
      
     </div>

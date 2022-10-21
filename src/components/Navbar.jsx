@@ -4,7 +4,6 @@ import Register from "./Register";
 
 const Navbar = () => {
   return (
-    <>
     <div id="navbar">
         <h2 id="siteName">Stranger's Things</h2>
         <div className = "navigation">
@@ -14,8 +13,6 @@ const Navbar = () => {
           <button className = "navBtn">Login</button>
         </div>
     </div>
-    <Outlet/>
-    </>
   );
 };
 
