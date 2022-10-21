@@ -4,6 +4,7 @@ import { useParams, Link} from "react-router-dom";
 
 const Posts = (props) => {
     const [posts, setAllPosts] = useState([])
+    
     useEffect(() => {
         async function fetchPosts() {
             const allPosts = await getPosts()
@@ -14,7 +15,7 @@ const Posts = (props) => {
 
     return (
         <div className="postsBox">
-            {
+            { 
                 posts.length ? posts.map((post) => {
                     return (
                         <div key={`posts-${post._id}`} id="singlePost">

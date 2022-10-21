@@ -20,7 +20,10 @@ const PostDetails = (props) => {
     }, []);
     
 
-    return (
+
+
+
+    return ( <>
         <div className="postDetails">
             <Link to="/Posts">
             <button id="detailBtn">Go Back</button>
@@ -34,6 +37,20 @@ const PostDetails = (props) => {
             <div id="detailDesc">{"Description: " + postDetails.description}</div>
             </div>
         </div>
+        
+        {/* <div className="postDetails">
+        <div key={`posts-${postDetails._id}`} id="postDetails">
+            <form>
+        <input><h1 id="detailTitle">{postDetails.title}</h1></input>
+        <div id="PriLoc">
+            <input id="detailPrice">{"Price: "+postDetails.price}</input>
+            <input id="detailLocate">{"Location: " + postDetails.location}</input>
+        </div>
+        <input id="detailDesc">{"Description: " + postDetails.description}</input>
+        </form>
+        </div>
+    </div> */}
+    </>
     )
 
     
