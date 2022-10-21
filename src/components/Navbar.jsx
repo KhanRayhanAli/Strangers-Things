@@ -4,15 +4,19 @@ import Register from "./Register";
 
 const Navbar = () => {
   return (
+    <>
     <div id="navbar">
         <h2 id="siteName">Stranger's Things</h2>
         <div className = "navigation">
-          <button className = "navBtn">Home</button>
-          <button className = "navBtn">Profile</button>
-          <button className = "navBtn">Posts</button>
-          <button className = "navBtn">Login</button>
+          <Link to="Home" ><button className = "navBtn">Home</button></Link>
+          
+          <Link to="Posts"><button className = "navBtn">Posts</button></Link>
+          <Link to="Login"><button className = "navBtn">Login</button></Link>
+          <Link to="Profile"><button className = "navBtn">Profile</button></Link>
         </div>
     </div>
+    <Outlet/>
+    </>
   );
 };
 
