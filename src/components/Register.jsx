@@ -16,14 +16,18 @@ const Register = (props) => {
 
     return (
         <div className="usePassBox">
-            <form onSubmit={handleSubmit}> 
-                <label htmlFor="username" >Username: </label>
-                <input id="username" type="text" required/>
-                <label htmlFor="password" >Password: </label>
-                <input id="password" type='password'/>
-                {/* <label htmlFor="confirmPassword" >Confirm Password: </label>
-                <input id="confirmpassword" type='password'/> */}
-                <button type="submit">Submit</button>
+            <form onSubmit={handleSubmit}>
+            <div id="userBox">
+                <label htmlFor="username">Username: </label>
+                <input id="username" type="text" required />
+            </div>
+            <div id="passBox">
+                <label htmlFor="password">Password: </label>
+                <input id="password" type="password" />
+            </div>
+            <div id="btnBox">
+                <button type="submit" id="loginBtn">Login</button>
+            </div>
             </form>
         </div>
     )

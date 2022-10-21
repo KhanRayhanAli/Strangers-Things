@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { useParams, Link} from "react-router-dom";
 import {loginUser} from "../api-adapter";
 
 const Login = (props) => {
@@ -17,12 +17,19 @@ return (
    
     <div className="usePassBox">
         <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username: </label>
-            <input id="username" type="text" required />
-            <label htmlFor="password">Password: </label>
-            <input id="password" type="password" />
-            <button type="submit">Login</button>
+            <div id="userBox">
+                <input id="username" type="text" placeholder="Username" required />
+            </div>
+            <div id="passBox">
+                <input id="password" type="password" placeholder="Password" required/>
+            </div>
+            <div id="btnBox">
+                <button type="submit" id="loginBtn">Login</button>
+            </div>
         </form>
+        <div>
+            <Link to='/Register' className = "linkDecor"><p id="signUp">Sign Up</p></Link>
+        </div>
     </div>
     
     ) 

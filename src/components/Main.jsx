@@ -52,7 +52,6 @@ const Main = () => {
       {/* <Login />
       <Register registerUser={registerUser} />
       <Profile />
-
       <PostDetails postData={postData} /> */}
       <RouterProvider router={router}></RouterProvider>
     </div>

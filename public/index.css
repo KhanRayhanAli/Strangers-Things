@@ -6,6 +6,11 @@ body {
   background-color: rgb(180, 180, 180);
 }
 
+#main {
+  display: flex;
+  flex-direction: column;
+}
+
 #navbar {
   font-family: 'Poller One', Arial, sans-serif;
   flex-grow: 1;
@@ -62,10 +67,10 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: .5rem;
+  max-width: max-content;
 }
 
 #allTitle {
-  padding-top: .5rem;
   color: rgb(168, 0, 0);
   font-family: 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
@@ -141,11 +146,83 @@ body {
 }
 
 .usePassBox {
+  align-self: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 1rem;
   background-color: #222222;
   color: white;
   margin: 1rem;
   border-radius: 5px;
+  max-width: max-content;
+}
+
+#userBox {
+  margin-bottom: .5rem;
+}
+
+#userBox input {
+  border-radius: 5px;
+}
+
+#passBox input {
+  border-radius: 5px;
+}
+
+#btnBox {
+  display: flex;
+  justify-content: center;
+}
+
+#loginBtn {
+  width: 50%;
+  font-family: 'Poller One', Arial, sans-serif;
+  background-color: #222222;
+  border: solid #3f3f3f;
+  padding: .5rem;
+  color: white;
+  border-radius: 5px;
+  font-size: .75rem;
+  cursor: pointer;
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+#loginBtn:hover {
+  background-color: #3f3f3f;
+}
+
+#signUp {
+  font-family: 'Poller One', Arial, sans-serif;
+  background-color: #222222;
+  border: solid #3f3f3f;
+  padding: .5rem;
+  color: white;
+  border-radius: 5px;
+  font-size: .75rem;
+  cursor: pointer;
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+#signUp:hover {
+  background-color: #3f3f3f;
+}
+
+.linkDecor {
+  text-decoration: none;
+}
+
+.Vecna {
+  display: flex;
+  justify-content: center;
+}
+
+#VecnaImg {
+  border-radius: 5px;
+  height: 375px;
+  width: 375px;
+  margin-top: 2rem;
 }
