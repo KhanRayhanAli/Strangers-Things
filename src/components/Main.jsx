@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { registerUser } from "../api-adapter";
-import { Navbar, Home, Login, Posts, Profile, Register, PostDetails } from "./";
+import { Navbar, Home, CreatePost, Login, Posts, Profile, Register, PostDetails } from "./";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -19,9 +19,8 @@ const Main = () => {
         <Route
           path="Register"
           element={<Register  />}
-        >
-
-        </Route>
+        ></Route>
+        <Route path="CreatePost" element={<CreatePost/>}></Route>
         <Route path="Profile" element={<Profile />}></Route>
         <Route
           path="Posts"

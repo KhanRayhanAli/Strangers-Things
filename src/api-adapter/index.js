@@ -70,3 +70,28 @@ export async function deletePost(id, token) {
   const result = await response.json()
   return result
 }
+
+export async function createPost(post, token) {
+  const options = {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token} `
+    }, 
+    body: JSON.stringify({
+      post: {
+        title: "",
+        description: "",
+        price: ""
+        
+
+      }
+    })
+  }
+  
+  const response = await fetch(`${BASE_URL}/api/${COHORT}/posts`, options)
+  console.log(response)
+      const result = await response.json()
+      console.log(result)
+      return result.data.token
+  }
