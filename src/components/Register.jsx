@@ -20,17 +20,10 @@ const Register = (props) => {
           <input id="username" type="text" placeholder="Username" required />
         </div>
         <div id="passBox">
-          <input
-            id="password"
-            type="password"
-            placeholder="Password"
-            required
-          />
+          <input id="password" type="password" placeholder="Password" required />
         </div>
         <div id="btnBox">
-          <button type="submit" id="loginBtn">
-            Register
-          </button>
+          <button type="submit" id="loginBtn">Register</button>
         </div>
       </form>
     </div>

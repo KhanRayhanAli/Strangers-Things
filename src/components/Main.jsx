@@ -1,12 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { registerUser } from "../api-adapter";
-import { Navbar, Home, CreatePost, Login, Posts, Profile, Register, PostDetails } from "./";
+
+import { 
+  Navbar, 
+  Home, 
+  CreatePost, 
+  Login, 
+  Posts, 
+  Profile, 
+  Register, 
+  PostDetails 
+} from "./";
+
 import {
   createBrowserRouter,
   RouterProvider,
   Route,
   createRoutesFromElements,
-  Navigate,
 } from "react-router-dom";
 
 const Main = () => {

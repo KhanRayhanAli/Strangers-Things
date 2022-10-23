@@ -5,9 +5,13 @@ const Home = () => {
   
 
 
-return (  <div className="Vecna">
-      <img src = {MyImage} alt = "Vecna" id="VecnaImg" /> 
+return (  
+  <div className="Vecna">
+    <img src = {MyImage} alt = "Vecna" id="VecnaImg" /> 
+    <div id="homeText">
+      <p>Get started today by logging in to create your first listing!</p>
     </div>
+  </div>
 )
 }
 

@@ -3,9 +3,6 @@ import { useParams, Link } from "react-router-dom";
 import { loginUser } from "../api-adapter";
 
 const Login = (props) => {
-  // const [username, setUsername] = useState("")
-  // const [password, setPassword] = useState("")
-  // const [user, setUser] = useState()
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -13,6 +10,7 @@ const Login = (props) => {
     const password = event.target[1].value;
     const registeredUser = await loginUser(username, password);
     const token = registeredUser.token;
+    console.log(token)
     localStorage.removeItem("token");
     localStorage.setItem("token", token);
   }
@@ -21,7 +19,6 @@ const Login = (props) => {
       <form onSubmit={handleSubmit}>
         <div id="userBox">
           <input id="username" type="text" placeholder="Username" required />
-          {/* // onChange={({target}) => setUsername(target.value)} */}
         </div>
         <div id="passBox">
           <input
@@ -30,7 +27,6 @@ const Login = (props) => {
             placeholder="Password"
             required
           />
-          {/* onChange={({target}) => setPassword(target.value)} */}
         </div>
         <div id="btnBox">
           <button type="submit" id="loginBtn">
