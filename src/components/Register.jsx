@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { registerUser } from "../api-adapter";
 
 const Register = (props) => {
+  const history = useNavigate();
   async function handleSubmit(event) {
     event.preventDefault();
     const username = event.target[0].value;
@@ -11,7 +13,8 @@ const Register = (props) => {
     console.log(token);
     localStorage.removeItem("token");
     localStorage.setItem("token", token);
-  }
+    history('/Posts')
+  } 
 
   return (
     <div className="usePassBox">

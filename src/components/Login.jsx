@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { loginUser } from "../api-adapter";
 
 const Login = (props) => {
-
+  const history = useNavigate();
   async function handleSubmit(event) {
     event.preventDefault();
     const username = event.target[0].value;
@@ -11,9 +11,11 @@ const Login = (props) => {
     const registeredUser = await loginUser(username, password);
     const token = registeredUser.token;
     console.log(token)
-    localStorage.removeItem("token");
+    
     localStorage.setItem("token", token);
-  }
+    history('/Posts')
+  } 
+
   return (
     <div className="usePassBox">
       <form onSubmit={handleSubmit}>

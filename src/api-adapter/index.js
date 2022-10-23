@@ -43,34 +43,13 @@ export async function loginUser(username, password) {
   return result.data
 }
 
-export async function createPost(post, token) {
-  localStorage.getItem('token')
-  const options = {
-    method: "POST",
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token} `
-    }, body: JSON.stringify({
-      post: {
-        title: '',
-        description: '',
-        price: '',
-      }
-    })
-  }
-  const response = await fetch(`${BASE_URL}/posts`, options)
-  console.log(response)
-      const result = await response.json()
-      console.log(result)
-      return result
-  }
 
 export async function updatePost(post, id, token) {
-const options = {
-  method: 'PATCH',
-  headers: {
-    'Content-Type': 'application/json',
-    'Authorization': `Bearer ${token}`
+  const options = {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
   }, body: JSON.stringify({
     post
   })
@@ -78,17 +57,40 @@ const options = {
 const response = await fetch(`${BASE_URL}/posts/${id}`, options)
     const result = await response.json()
     return result
-}
-
+  }
+  
 export async function deletePost(id, token) {
   const options = {
-      method: 'DELETE',
+    method: 'DELETE',
       headers: {
-          'Content-Type': 'application/json',
+        'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
+        }
       }
-  }
-  const response = await fetch(`${BASE_URL}/posts/${id}`, options)
-  const result = await response.json()
-  return result
-}
+      const response = await fetch(`${BASE_URL}/posts/${id}`, options)
+      const result = await response.json()
+      return result
+    }
+    
+    // export async function createPost(post, token) {
+    //   // localStorage.getItem('token')
+    //   const options = {
+    //     method: "POST",
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //       'Authorization': `Bearer ${localStorage.getItem(token)} `
+    //     }, body: JSON.stringify({
+    //       post: {
+    //         title: '',
+    //         description: '',
+    //         price: '',
+    //         location: ''
+    //       }
+    //   })
+    //   }
+    //   const response = await fetch(`${BASE_URL}/posts`, options)
+    //   console.log(response)
+    //       const result = await response.json()
+    //       console.log(result)
+    //       return result
+    //   }

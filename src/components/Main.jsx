@@ -17,6 +17,7 @@ import {
   RouterProvider,
   Route,
   createRoutesFromElements,
+  
 } from "react-router-dom";
 
 const Main = () => {
@@ -30,7 +31,7 @@ const Main = () => {
           path="Register"
           element={<Register  />}
         ></Route>
-        <Route path="CreatePost" element={<CreatePost/>}></Route>
+        <Route path="CreatePost" element={<CreatePost />}></Route>
         <Route path="Profile" element={<Profile />}></Route>
         <Route
           path="Posts"
