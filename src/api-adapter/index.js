@@ -71,7 +71,9 @@ export async function deletePost(id, token) {
   return result
 }
 
+
 export async function createPost(post, token) {
+  localStorage.getItem('token')
   const options = {
     method: "POST",
     headers: {
@@ -80,15 +82,14 @@ export async function createPost(post, token) {
     }, 
     body: JSON.stringify({
       post: {
-        title: "",
-        description: "",
-        price: ""
+        title: '',
+        description: '',
+        price: '',
         
 
       }
     })
   }
-  
   const response = await fetch(`${BASE_URL}/api/${COHORT}/posts`, options)
   console.log(response)
       const result = await response.json()

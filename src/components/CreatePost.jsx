@@ -12,10 +12,11 @@ const CreatePost = (props) => {
         const title = event.target[0].value
         const description = event.target[1].value 
         const price = event.target[2].value
-        console.log(title, price, description)
-        const token = await createPost(title, price, description)
         
-        localStorage.removeItem('token')
+        const token = await createPost(title, price, description)
+       
+        
+        localStorage.removeItem("token")
         localStorage.setItem('token', token)
         
 } 
