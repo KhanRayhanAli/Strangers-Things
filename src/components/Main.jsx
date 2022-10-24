@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { registerUser } from "../api-adapter";
 
-import { 
-  Navbar, 
-  Home, 
-  CreatePost, 
-  Login, 
-  Posts, 
-  Profile, 
-  Register, 
-  PostDetails 
+import {
+  Navbar,
+  Home,
+  CreatePost,
+  Login,
+  Posts,
+  Profile,
+  Register,
+  PostDetails,
 } from "./";
 
 import {
@@ -17,20 +17,33 @@ import {
   RouterProvider,
   Route,
   createRoutesFromElements,
-  
 } from "react-router-dom";
 
 const Main = () => {
   const [postData, setPostData] = useState([]);
+  // const [searchInfo, setSearchInfo] = useState({title:""})  
+
+  // function filterPosts() {
+  //   if (!searchInfo.title) {return postData}
+  //   else {
+  //     return postData.filter((filteredPosts) => {
+  //       console.log()
+  //       return filteredPosts.title.toLowerCase() == searchInfo.title.toLowerCase() 
+  //     })
+  //   }
+  // } 
+
+
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Navbar />}>
         <Route path="Home" element={<Home />}></Route>
-        <Route path="Login" element={<Login registerUser={registerUser} />}></Route>
         <Route
-          path="Register"
-          element={<Register  />}
+          path="Login"
+          element={<Login registerUser={registerUser} />}
         ></Route>
+        <Route path="Register" element={<Register />}></Route>
         <Route path="CreatePost" element={<CreatePost />}></Route>
         <Route path="Profile" element={<Profile />}></Route>
         <Route
@@ -59,10 +72,6 @@ const Main = () => {
 
   return (
     <div id="main">
-      {/* <Login />
-      <Register registerUser={registerUser} />
-      <Profile />
-      <PostDetails postData={postData} /> */}
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

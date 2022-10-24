@@ -10,11 +10,11 @@ const Login = (props) => {
     const password = event.target[1].value;
     const registeredUser = await loginUser(username, password);
     const token = registeredUser.token;
-    console.log(token)
-    
+    console.log(token);
+
     localStorage.setItem("token", token);
-    history('/Posts')
-  } 
+    history("/Posts");
+  }
 
   return (
     <div className="usePassBox">
