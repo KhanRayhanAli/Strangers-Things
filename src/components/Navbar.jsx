@@ -1,6 +1,5 @@
 import React from "react";
-import { useParams, Link, Outlet } from "react-router-dom";
-import Register from "./Register";
+import { Link, Outlet } from "react-router-dom";
 
 const Navbar = () => {
   return (

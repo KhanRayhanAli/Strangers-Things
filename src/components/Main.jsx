@@ -21,19 +21,6 @@ import {
 
 const Main = () => {
   const [postData, setPostData] = useState([]);
-  // const [searchInfo, setSearchInfo] = useState({title:""})  
-
-  // function filterPosts() {
-  //   if (!searchInfo.title) {return postData}
-  //   else {
-  //     return postData.filter((filteredPosts) => {
-  //       console.log()
-  //       return filteredPosts.title.toLowerCase() == searchInfo.title.toLowerCase() 
-  //     })
-  //   }
-  // } 
-
-
 
   const router = createBrowserRouter(
     createRoutesFromElements(

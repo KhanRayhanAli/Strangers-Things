@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { createPost } from "../api-adapter";
 
-// set pieces of state for title, desc,price, location, etc.
-const BASE_URL =
-  "https://strangers-things.herokuapp.com/api/2209-FTB-ET-WEB-FT";
 const CreatePost = (props) => {
   const [title, setPostTitle] = useState("");
   const [price, setPostPrice] = useState("");
@@ -16,7 +12,6 @@ const CreatePost = (props) => {
   async function handleCreate(event) {
     event.preventDefault();
     const newPost = { title, price, description, location };
-    console.log(newPost);
 
     setIsLoading(true);
 
@@ -26,7 +21,7 @@ const CreatePost = (props) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")} `,
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
         body: JSON.stringify({
           post: {
@@ -40,7 +35,6 @@ const CreatePost = (props) => {
     )
       .then((response) => response.json())
       .then((result) => {
-        console.log(result);
         setIsLoading(false);
         history("/Posts");
       });
@@ -88,7 +82,6 @@ const CreatePost = (props) => {
         )}
       </form>
     </div>
-    // add on change for event
   );
 };
 

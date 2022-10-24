@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { getPosts } from "../api-adapter";
-import { useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Posts = (props) => {
   const [posts, setAllPosts] = useState([]);
-  const [searchInfo, setSearchInfo] = useState({title:""})  
+  const [searchInfo, setSearchInfo] = useState({ title: "" });
 
-  const postData = props.postData
+  const postData = props.postData;
 
   function filterPosts() {
-    if (!searchInfo.title) {return postData}
-    else {
+    if (!searchInfo.title) {
+      return postData;
+    } else {
       return postData.filter((filteredPosts) => {
-        return filteredPosts.title.toLowerCase() == searchInfo.title.toLowerCase() 
-      })
+        return (
+          filteredPosts.title.toLowerCase() == searchInfo.title.toLowerCase()
+        );
+      });
     }
-  } 
+  }
 
   useEffect(() => {
     async function fetchPosts() {
@@ -25,16 +28,20 @@ const Posts = (props) => {
     fetchPosts();
   }, []);
 
-  const handleChange = event => {
-    const searchInfo = event.target.value
-    setSearchInfo({title:searchInfo})
+  const handleChange = (event) => {
+    const searchInfo = event.target.value;
+    setSearchInfo({ title: searchInfo });
   };
 
   return (
     <div>
-        <div id="searchBar">
-            <input type="text" placeholder="Search by Post Title" onChange={handleChange}></input>
-        </div>
+      <div id="searchBar">
+        <input
+          type="text"
+          placeholder="Search by Post Title"
+          onChange={handleChange}
+        ></input>
+      </div>
       <div className="postsBox">
         {posts.length ? (
           filterPosts().map((post) => {

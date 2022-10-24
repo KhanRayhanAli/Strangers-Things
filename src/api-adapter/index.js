@@ -74,26 +74,3 @@ export async function deletePost(id, token) {
   const result = await response.json();
   return result;
 }
-
-// export async function createPost(post, token) {
-//   // localStorage.getItem('token')
-//   const options = {
-//     method: "POST",
-//     headers: {
-//       'Content-Type': 'application/json',
-//       'Authorization': `Bearer ${localStorage.getItem(token)} `
-//     }, body: JSON.stringify({
-//       post: {
-//         title: '',
-//         description: '',
-//         price: '',
-//         location: ''
-//       }
-//   })
-//   }
-//   const response = await fetch(`${BASE_URL}/posts`, options)
-//   console.log(response)
-//       const result = await response.json()
-//       console.log(result)
-//       return result
-//   }
