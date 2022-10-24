@@ -23,9 +23,9 @@ const Profile = () => {
     .catch(console.error);
 
   return (
-    <div>
+    <div id='profilePage'>
       <h1>Your profile here</h1>
-      <div>
+      <div id='profMessages'>
         {console.log()}
       </div>
     </div>
